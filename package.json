@@ -1,0 +1,24 @@
+{
+    "name": "base",
+    "version": "0.9.0",
+    "contributors": [
+        "Stefano Marchesi"
+    ],
+    "license": "BSD-3-Clause",
+    "repository": "Polymer/pwa-starter-kit",
+    "dependencies": {
+        "@ui5/webcomponents": "^0.10.1",
+        "@webcomponents/webcomponentsjs": "^2.2.4",
+        "lit-element": "^2.0.1",
+        "pwa-helpers": "^0.9.0",
+        "redux": "^4.0.0",
+        "redux-thunk": "^2.3.0",
+        "rollup-plugin-babel-minify": "^8.0.0"
+    },
+    "devDependencies": {
+        "rollup-plugin-filesize": "^6.0.1",
+        "rollup-plugin-minify-html-literals": "^1.2.2",
+        "rollup-plugin-clear": "^2.0.7",
+        "rollup-plugin-node-resolve": "^4.2.3"
+    }
+}

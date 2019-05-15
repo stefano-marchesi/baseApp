@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My app</title>
+    <meta name="generator" content="PWA Starter Kit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My App description">
+    <base href="/">
+    <meta name="theme-color" content="#3f51b5">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script>
+        window.process = {
+            env: {
+                NODE_ENV: 'production'
+            }
+        };
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Pacifico';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/Q_Z9mv4hySLTMoMjnk_rCXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+            font-display: swap;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.5;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            --colore-base: black;
+        }
+        
+        h1 {
+            background-color: var(--colore-base)
+        }
+    </style>
+</head>
+
+<body>
+    <shell-component></shell-component>
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="src/shellComponent.js"></script>
+</body>
+
+</html>

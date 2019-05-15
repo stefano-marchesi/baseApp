@@ -14,12 +14,14 @@ class counterElement extends connect(store)(LitElement) {
         this.counterValue = state.counter.value
     }
 
+
     render() {
         return html `
         <div>
+
             <ui5-input id="numero" type="Number" placeholder="Inserisci un numero"></ui5-input>            
-            <ui5-button @click="${()=>{this.aggiungi()}}" type="Positive" icon-end>Aggiungi</ui5-button>
             <ui5-button @click="${()=>{this.sottrai()}}" type="Negative">Sottrai</ui5-button>
+            <ui5-button @click="${()=>{this.aggiungi()}}" type="Positive" icon-end>Aggiungi</ui5-button>
             <div>Valore counter: ${this.counterValue}</div>
             
         </div>

@@ -9,12 +9,10 @@ class shellComponent extends LitElement {
 
         }
     }
-
     render() {
         return html `
         <div>
-            funziona tutto
-
+            test
             <counter-element></counter-element>
         </div>
         `;

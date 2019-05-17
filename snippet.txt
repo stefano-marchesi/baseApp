@@ -1,22 +1,67 @@
 {
-	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-	"Print to console": {
-		"prefix": "az-log",
-		"body": [
-			"console.log('$1');"
-		],
-		"description": "Log output to console"
-	}
+    // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "Print to console": {
+        "prefix": "az-log",
+        "body": [
+            "console.log('$1');"
+        ],
+        "description": "Log output to console"
+    },
+
+    "Ritorna una promessa": {
+        "prefix": "az-log",
+        "body": [
+            "return new Promise((resolve, reject) => {",
+            "   resolve()",
+            "   reject()",
+            "});"
+        ],
+        "description": "Ritorna una promessa"
+    },
+
+
+    "Nuovo elemento": {
+        "prefix": "az-Element",
+        "body": [
+            "import { LitElement, html } from 'lit-element';",
+            "",
+            "class $1 extends LitElement {",
+            "    static get properties() {",
+            "        return {",
+            "",
+            "        }",
+            "    }",
+            "",
+            "    render() {",
+            "        return html `",
+            "        <div>",
+            "            $2",
+            "        </div>",
+            "        `;",
+            "    }",
+            "",
+            "    constructor() {",
+            "        super();",
+            "        console.log('funziona');",
+            "",
+            "    }",
+            "",
+            "}",
+            "",
+            "customElements.define('$2', $1); "
+        ],
+        "description": "Nuovo elemento"
+    }
 }

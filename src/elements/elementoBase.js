@@ -1,16 +1,23 @@
 import { LitElement, html } from 'lit-element';
+import { store } from './../data/store.js'
+import { connect } from 'pwa-helpers/connect-mixin.js';
 
 import './elementoLista'
 import './elementoNuovo'
 import './elementoArticolo'
 
-class elementoBase extends LitElement {
+class elementoBase extends connect(store)(LitElement) {
     static get properties() {
         return {
             paginaDaGuardare: String
         }
     }
 
+    stateChanged(state) {
+
+        this.paginaDaGuardare = state.pagina.value
+
+    }
     render() {
 
         return html `
@@ -41,7 +48,11 @@ class elementoBase extends LitElement {
         }
     }
     cambiaPagina(pagina) {
-        this.paginaDaGuardare = pagina
+
+        store.dispatch({
+            type: 'CAMBIA_PAGINA',
+            payload: pagina
+        })
     }
 
     constructor() {

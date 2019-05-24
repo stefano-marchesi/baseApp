@@ -1,4 +1,5 @@
 import { LitElement, html } from 'lit-element';
+import { store } from './../data/store';
 
 class elementoLista extends LitElement {
     static get properties() {
@@ -25,12 +26,23 @@ class elementoLista extends LitElement {
             </style>
         <div>
             ${this.lista.map((element)=>{return html`
-                <div @click="${()=>{this.vaiAdArticolo(element.titolo)}}" class="titolo">${element.titolo}</div>
+                <div @click="${()=>{this.vaiAdArticolo(element)}}" class="titolo">${element.titolo}</div>
             `})}
         </div>
         `;
     }
-    vaiAdArticolo(titolo){
+    vaiAdArticolo(articolo){
+
+        store.dispatch({
+            type: 'CAMBIA_PAGINA',
+            payload: 'articolo'
+        })
+
+        store.dispatch({
+            type: 'CAMBIA_ARTICOLO_DA_GUARDARE',
+            payload: articolo
+        })
+
         console.log(titolo);
         
     }
